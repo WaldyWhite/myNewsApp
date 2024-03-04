@@ -5,6 +5,7 @@ import { Text, View } from 'react-native';
 import { gStyle } from './styles/styles';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
+import Main from './components/Main';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -49,8 +50,7 @@ export default function App() {
 
   return (
     <View style={gStyle.main} onLayout={onLayoutRootView}>
-      <Text style={gStyle.title}>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Main />
     </View>
   );
 }
