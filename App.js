@@ -1,11 +1,11 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { gStyle } from './styles/styles';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
-import Main from './components/Main';
+import MainStack from './navigate';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -22,7 +22,7 @@ export default function App() {
         });
         // Artificially delay for two seconds to simulate a slow loading
         // experience. Please remove this if you copy and paste the code!
-        //await new Promise(resolve => setTimeout(resolve, 2000));
+        //await new Promise(resolve => setTimeout(resolve, 12000));
       } catch (e) {
         console.warn(e);
       } finally {
@@ -49,9 +49,10 @@ export default function App() {
   }
 
   return (
-    <View style={gStyle.main} onLayout={onLayoutRootView}>
-      <Main />
-    </View>
+      <>
+      <MainStack />
+      </>
+
   );
 }
 

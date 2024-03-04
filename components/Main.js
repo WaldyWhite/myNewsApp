@@ -5,7 +5,7 @@ import { gStyle } from '../styles/styles';
 const Main = () => {
     return (
         <View style={gStyle.main} >
-            <Text style={gStyle.title}>This is Main</Text>
+            <Text style={gStyle.title}>This is my Main</Text>
         </View>
 
     );
